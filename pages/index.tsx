@@ -15,8 +15,9 @@ import {
   InputLabel
 } from '@mui/material'
 // import backgroundMobile from '../public/background-mobile-min.gif'
-// import backgroundDesktop from '../public/background-desktop-min.gif'
+import backgroundDesktop from '../public/background-desktop-min.gif'
 import Image from 'next/image'
+import TextInput from '../components/styled-components/TextInput'
 
 const Home: NextPage = () => {
   const { t } = useTranslation()
@@ -35,16 +36,16 @@ const Home: NextPage = () => {
   }
 
   return (
-    
     <Stack
       sx={{
         width: '100%',
         height: '100vh',
-        // backgroundImage: {
-        //   xs: `url('${backgroundMobile.src}')`,
-        //   md: `url('${backgroundDesktop.src}')`,
-        //   lg: `url('${backgroundDesktop.src}')`
-        // },
+        backgroundImage: {
+          // xs: `url('${backgroundMobile.src}')`,
+          md: `url('${backgroundDesktop.src}')`,
+          lg: `url('${backgroundDesktop.src}')`
+        },
+        background: 'purple',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: '100% 100%',
@@ -59,7 +60,7 @@ const Home: NextPage = () => {
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
-          marginLeft: { xs: '0px', md: '80px', lg: "250px"}
+          marginLeft: { xs: '0px', md: '80px', lg: '250px' }
         }}
       >
         <Stack sx={{ alignItems: 'center' }}>
@@ -93,7 +94,7 @@ const Home: NextPage = () => {
           >
             {t('login.title2')}
           </Typography>
-          <Input
+          {/* <Input
             placeholder={t('login.referral')}
             sx={{
               marginTop: { xs: '15px', md: '40px' },
@@ -104,7 +105,15 @@ const Home: NextPage = () => {
               border: '2px solid #CB03AD',
               WebkitBackgroundSize: '2px'
             }}
-          ></Input>
+          ></Input> */}
+          <TextInput
+            placeholder={t('login.referral')}
+            sx={{
+              marginTop: { xs: '15px', md: '40px' },
+              width: { xs: '300px', md: '400px' },
+              height: { xs: '30px', md: '40px' }
+            }}
+          />
         </Stack>
         <Stack
           sx={{
@@ -151,23 +160,73 @@ const Home: NextPage = () => {
       <Stack
         sx={{
           display: { xs: 'none', md: 'flex', lg: 'flex' },
-          flexDirection: "row",
+          flexDirection: 'row',
           marginTop: '30px',
           marginRight: '50px'
         }}
       >
-        <FormControl sx={{border: "none", color: "white", fontSize: "20px", fontWeight: "700", fontFamily: "Oxanium" }}>
-          <InputLabel id="demo-simple-select-label" sx={{ color: "white", fontSize: "20px", fontFamily: "Oxanium", fontWeight: "700", marginTop: "-5px"}}>{t("language.select")}</InputLabel>
+        <FormControl
+          sx={{
+            border: 'none',
+            color: 'white',
+            fontSize: '20px',
+            fontWeight: '700',
+            fontFamily: 'Oxanium'
+          }}
+        >
+          <InputLabel
+            id="demo-simple-select-label"
+            sx={{
+              color: 'white',
+              fontSize: '20px',
+              fontFamily: 'Oxanium',
+              fontWeight: '700',
+              marginTop: '-5px'
+            }}
+          >
+            {t('language.select')}
+          </InputLabel>
           <Select
             displayEmpty
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            sx={{backgroundColor: '#CE18C5', borderRadius: "0px", width:"260px", height: "45px", color: "white", fontSize: "20px", fontWeight: "700", fontFamily: "Oxanium", textAlign: "center" }}
+            sx={{
+              backgroundColor: '#CE18C5',
+              borderRadius: '0px',
+              width: '260px',
+              height: '45px',
+              color: 'white',
+              fontSize: '20px',
+              fontWeight: '700',
+              fontFamily: 'Oxanium',
+              textAlign: 'center'
+            }}
             onChange={handleChange}
           >
-            <MenuItem value="en-US" sx={{ color: '#CE18C5', fontSize: "20px", fontWeight: "700", fontFamily: "Oxanium", textAlign: "end"}}>{t("language.language2")}</MenuItem>
-            <MenuItem value="es-ES" sx={{ color: '#CE18C5', fontSize: "20px", fontWeight: "700", fontFamily: "Oxanium", textAlign: "end" }}>{t("language.language1")}</MenuItem>
-            
+            <MenuItem
+              value="en-US"
+              sx={{
+                color: '#CE18C5',
+                fontSize: '20px',
+                fontWeight: '700',
+                fontFamily: 'Oxanium',
+                textAlign: 'end'
+              }}
+            >
+              {t('language.language2')}
+            </MenuItem>
+            <MenuItem
+              value="es-ES"
+              sx={{
+                color: '#CE18C5',
+                fontSize: '20px',
+                fontWeight: '700',
+                fontFamily: 'Oxanium',
+                textAlign: 'end'
+              }}
+            >
+              {t('language.language1')}
+            </MenuItem>
           </Select>
         </FormControl>
         <Button
@@ -181,7 +240,7 @@ const Home: NextPage = () => {
             fontWeight: '700',
             textTransform: 'capitalize',
             color: 'white',
-            marginLeft: "5px"
+            marginLeft: '5px'
           }}
         >
           {t('login.log')}
