@@ -14,8 +14,8 @@ import {
   FormControl,
   InputLabel
 } from '@mui/material'
-// import backgroundMobile from '../public/background-mobile-min.gif'
-// import backgroundDesktop from '../public/background-desktop-min.gif'
+import backgroundMobile from '../public/background-mobile-min.gif'
+import backgroundDesktop from '../public/background-desktop-min.gif'
 import Image from 'next/image'
 
 const Home: NextPage = () => {
@@ -40,11 +40,11 @@ const Home: NextPage = () => {
       sx={{
         width: '100%',
         height: '100vh',
-        // backgroundImage: {
-        //   xs: `url('${backgroundMobile.src}')`,
-        //   md: `url('${backgroundDesktop.src}')`,
-        //   lg: `url('${backgroundDesktop.src}')`
-        // },
+        backgroundImage: {
+          xs: `url('${backgroundMobile.src}')`,
+          md: `url('${backgroundDesktop.src}')`,
+          lg: `url('${backgroundDesktop.src}')`
+        },
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: '100% 100%',
