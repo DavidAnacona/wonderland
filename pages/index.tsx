@@ -109,8 +109,8 @@ const Home: NextPage = () => {
             placeholder={t('login.referral')}
             sx={{
               marginTop: { xs: '15px', md: '40px' },
-              width: { xs: '300px', md: '400px' },
-              height: { xs: '30px', md: '40px' }
+              width: { xs: '350px', md: '400px' },
+              height: { xs: '30px', md: '40px' },
             }}
           />
         </Stack>

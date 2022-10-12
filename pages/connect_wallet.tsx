@@ -5,14 +5,8 @@ import { useTranslation } from 'react-i18next'
 import {
   Stack,
   Typography,
-  Select,
-  MenuItem,
   SelectChangeEvent,
-  Button,
   useMediaQuery,
-  Input,
-  FormControl,
-  InputLabel,
   Box
 } from '@mui/material'
 import backgroundMobile from '../public/connect_wallet/background_wallet_mobile.png'

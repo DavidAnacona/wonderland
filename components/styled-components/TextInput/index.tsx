@@ -13,10 +13,11 @@ const CustomInput = styled('input')(({ theme }) => ({
     fontFamily: "'Oxanium'",
     fontStyle: 'normal',
     fontWeight: 700,
-    fontSize: '20px',
+    fontSize: {xs: "13px", md: "20px"},
     lineHeight: '25px',
     textTransform: 'uppercase',
-    color: '#FFFFFF'
+    color: '#FFFFFF',
+    textAlign: "center"
   },
   '&:focus': {
     border: '2px solid #CB03AD !important',
